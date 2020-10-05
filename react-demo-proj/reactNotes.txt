@@ -1,0 +1,70 @@
+React
+  - A library developed by facebook that is efficient in updating DOM and view rendering.
+  - component based.
+  - It's very lite weight. Can combine with other libraries flexibly to create a SPA.
+  - JSX: JavaScript XML, html like syntax, transpiler Babel will compile JSX to above code
+    - Babel(transpiler) will compile JSX to below
+    - React.createElement(tag, props, children)
+  - compatible with typescript
+
+  - Before react 16.8, there is a concept called container vs components
+
+  - Component communications:
+    - Parent to Child:
+        in parent, pass data through attribute created under child component
+        in child, receive data from props
+    - Child to Parent
+        in parent, create a function and pass the function to child.
+        in child, receive the function reference through props, then invoke the function and pass data
+        as arguments/parameters
+    - context api vs redux to do components communication that are not parent child relationship
+
+  - class components vs functional components(logic inside functional component will be executed upon each rendering)
+
+  - state vs props
+  - setState() update state, it's asynchronous
+
+  - React reconciliation
+    When first time render is called (functional component, jsx is returned), a
+     virtual DOM (react elements) will be created. React will save this virtual DOM
+     as old virtual DOM. Next time render is called, react will use diffing algorithm to
+      compare newly created virtual DOM with the old virtual DOM to find the minimal changes
+      that react needs to update real DOM. Then react will do a patch update on real DOM to
+      reduce the rendering times.
+
+  - routing in react
+  - React.Fragment(similar to ng-container)
+  - Semantic tags/elements, SEO, Web Crawler, Web Accessibility
+
+  - Redux principles:
+    1. Single Source of Truth
+         One application should have only one      	redux store
+    2. State is readonly
+    3. Changes are made with pure function
+        pure function: returned data is only relying on the input parameters, no side effect
+
+  - Redux flow
+    First, connect component to redux store.
+
+  - redux promise, redux thunk, redux saga =>  middleware
+
+  - send ajax request: axios, es6 fetch api (es6 async, await).
+
+  - React component lifecycle hook methods (remember the pic)
+
+  - Form support, customize, lib: redux form/react final form, formik, yup
+
+  - Ref  createRef, useRef
+
+  - React hooks, useState, useEffect, useLayoutEffect, etc.
+
+  - HOC: Higher-Order Components
+    A higher-order component (HOC) is an advanced technique in React for reusing component logic.
+    a higher-order component is a function that takes a component and returns a new component.
+    example? connect, our own hoc
+
+
+
+  - explore react libraries
+
+
